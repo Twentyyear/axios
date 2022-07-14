@@ -3,6 +3,7 @@ import url from 'url';
 import path from 'path';
 import http from 'http';
 let server;
+const __dirname = path.resolve() //不添加这一行会__dirname未找到? 不过为什么会产生这个问题我不知道
 
 function pipeFileToResponse(res, file, type) {
   if (type) {
